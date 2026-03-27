@@ -1,0 +1,99 @@
+:root {
+    --primary-color: #2c2c2c; /*Imposto la palette di colori*/
+    --accent-color: #bfa07d; /* Tonalità legno/beige */
+    --bg-color: #f4f1ee;
+}
+
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+}
+
+header {
+    display: flex; /*trasforma l'header in un container di tipo flex*/
+    justify-content: space-between; /*aggiunge spaziatura SOLO tra gli elementi */
+    align-items: center; /*allinea gli elementi lungo l'asse secondario*/
+    padding: 20px 5%;
+    background: white;
+}
+
+.logo { font-weight: bold; font-size: 24px; }
+.logo span { color: var(--accent-color); }
+
+.icon a {
+    text-decoration: none; /* Rimuove la sottolineatura */
+    color: inherit;        /* Fa sì che l'icona mantenga il suo colore originale */
+    display: inline-block; /* Aiuta a gestire meglio lo spazio cliccabile */
+}
+
+nav ul { list-style: none; display: flex; gap: 20px; }
+nav a { text-decoration: none; color: var(--primary-color); font-weight: 500; }
+
+/* Contenitore Immagine */
+.isometric-container {  /*e come se fosse la parete su cui è appesa l'immagine*/
+    display: flex;
+    justify-content: center; /*mantiene l'immagine sempre al centro*/
+    padding: 50px 0;
+}
+
+.room-wrapper {  /*serve a tenere gli hotspot nei limiti dell'immagine*/
+    position: relative; /*e come se fosse la cornice dell'img, "impacchetta insieme"hotspot e immagine*/
+    max-width: 1000px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.base-room {  /**/
+    display: block; /*'immagine si comporta come un solido blocco rettangolare, eliminando spazi vuoti indesiderati nel footer o nel wrapper.*/
+    width: 100%; /*serve ad adattarsi al massino alle dimensioni stabilite*/
+    height: auto; /*nel wrapper, altrimenti rimarrebbe di dim fissa a prescindere*/
+    border-radius: 8px;/*da pc, telefono, ecc. ecc.*/
+    transition: transform 0.5s ease;
+}
+
+
+/* Hotspot (i cerchi cliccabili) */
+.hotspot {
+    position: absolute; /*posizione assoluta ancorata all'immagine di base grazie al wrapper*/
+    width: 30px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px solid var(--accent-color);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    transform: translate(-50%, -50%);
+}
+
+.hotspot:hover {
+    background: var(--accent-color);
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+/* Tooltip che appare al passaggio del mouse */
+.hotspot::after {
+    content: attr(data-name);
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary-color);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+.hotspot:hover::after {
+    opacity: 1;
+}
+
+.room-wrapper:hover .base-room { /*Quando il mouse dell'utente entra nell'area del Wrapper, trova l'immagine Base-Room al suo interno e applicale queste modifiche.*/
+    transform: scale(1.02); /* Effetto leggero ingrandimento 1.02*/
+}
