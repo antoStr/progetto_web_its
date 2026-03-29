@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ece7da;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #000;
+}
+
+.container-nav {
+  height: 80px;
+  background-color: #464646;
+}
+
+/* Sezione Hero */
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 400px;
+  padding: 60px 300px;
+  background-color: #ffffff;
+}
+
+img {
+  display: block;
+  object-fit: cover;
+  border-radius: 5px;
+  max-width: 100%;
+  margin-right: 50px;
+  box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.225);
+}
+
+p {
+  font-size: 1.3rem;
+  max-width: 45ch;
+}
