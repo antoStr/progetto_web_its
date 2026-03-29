@@ -6,7 +6,6 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #ece7da;
   font-size: 1rem;
   line-height: 1.6;
   color: #000;
@@ -20,12 +19,13 @@ body {
 /* Sezione Hero */
 
 .hero {
+  background-color: #ece7da;
+  min-height: 400px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 400px;
   padding: 60px 300px;
-  background-color: #ffffff;
+  margin-bottom: 50px;
 }
 
 img {
@@ -40,4 +40,25 @@ img {
 p {
   font-size: 1.3rem;
   max-width: 45ch;
+}
+
+/* Sezione cta */
+
+.cta {
+  font-size: 1.2rem;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.cta-btn {
+  text-decoration: none;
+  color: #000000;
+  background-color: #55e055;
+  
+  padding: 3px 15px;
+  border-radius: 15px;
 }
