@@ -19,8 +19,9 @@ header {
     background: white;
 }
 
-.logo { font-weight: bold; font-size: 24px; }
+.logo { text-decoration: none; font-weight: bold; font-size: 24px; color: var(--primary-color);}
 .logo span { color: var(--accent-color); }
+.logo:hover { color: var(--accent-color); transition: all 0.3s ease;} /* Diventa rosso al passaggio */
 
 .icon a {
     text-decoration: none; /* Rimuove la sottolineatura */
@@ -78,7 +79,7 @@ nav a { text-decoration: none; color: var(--primary-color); font-weight: 500; }
     position: absolute;
     bottom: 40px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); /*DA COMMENTARE*/
     background: var(--primary-color);
     color: white;
     padding: 5px 12px;
@@ -97,3 +98,124 @@ nav a { text-decoration: none; color: var(--primary-color); font-weight: 500; }
 .room-wrapper:hover .base-room { /*Quando il mouse dell'utente entra nell'area del Wrapper, trova l'immagine Base-Room al suo interno e applicale queste modifiche.*/
     transform: scale(1.02); /* Effetto leggero ingrandimento 1.02*/
 }
+
+/* --- Stili Pagina Catalogo --- */
+
+.catalog-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 5%;
+}
+
+.intro-text {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.intro-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Griglia Prodotti */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Card Prodotto */
+.product-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-img-wrapper {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.product-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-img-wrapper img {
+    transform: scale(1.1);
+}
+
+.product-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.product-info h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.product-info p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: var(--primary-color);
+}
+
+/* Bottone Carrello */
+.add-to-cart {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: var(--accent-color);
+}
+
+/* Classe Utility per link attivo */
+nav a.active {
+    border-bottom: 2px solid var(--accent-color);
+}
+
+/* 
+@media screen and (min-width: 768px) {
+    body {
+        background-color: lightgrey;
+    }
+}
+
+/* Desktop (dai 1024px in su) */
+/* @media screen and (min-width: 1024px) {
+    .container {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    body {
+        background-color: lightgrey;
+    }
+}  */
