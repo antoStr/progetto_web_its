@@ -154,7 +154,7 @@ ul {
   justify-content: center;
 }
 
-/* Sezione recensioni */
+/* SEZIONE RECENSIONI */
 
 .container-recensione {
   min-height: 400px;
@@ -175,25 +175,35 @@ ul {
   max-width: 600px;
 }
 
-/* sezione incentivi */
+/* SEZIONE INCENTIVI */
+
+.sec-incentivi {
+  color: #fff;
+  background-color: #003554;
+}
 
 .container-incentivi {
   min-height: 400px;
-  padding: 0px 250px 20px;
+  padding: 0px 250px 60px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 350px;
+  gap: 200px;
 }
 
-.white h2 {
-  margin-bottom: 60px;
+.sec-incentivi h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
 }
 
 .container-incentivi article h3,
-.container-incentivi article blockquote p {
+.container-incentivi .list-element p {
   text-align: center;
-  margin-bottom: 20px;
+}
+
+.container-incentivi .list-element p,
+.container-incentivi .list-element i {
+  font-size: 1.2rem;
 }
 
 .container-incentivi article {
@@ -201,8 +211,8 @@ ul {
 }
 
 .container-incentivi .list-element {
-  margin-bottom: 20px;
-  gap: 40px;
+  margin-bottom: 0px;
+  gap: 20px;
 }
 
 section + .cta-b {
@@ -210,4 +220,19 @@ section + .cta-b {
   background-color: #ece7da;
 }
 
-/* Footer */
+/* FOOTER */
+
+.container-footer {
+  min-height: 400px;
+  padding: 70px 250px 60px;
+  background-color: rgb(76, 76, 76);
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 80px;
+  font-size: 1.4rem;
+}
+
+.box-1, .box-2, .box-3 {
+  max-width: 300px;
+}
