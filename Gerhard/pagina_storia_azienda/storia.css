@@ -11,11 +11,13 @@ body {
     color: #000;
 }
 
+/*navbar*/
 .container-nav {
     height: 80px;
     background-color: #464646;
 }
 
+/* sezione chi siamo */
 .chi-siamo {
     background-color: #ece7da;
     min-height: 400px;
@@ -24,20 +26,16 @@ body {
     justify-content: space-between;
     padding: 60px 300px;
     margin-bottom: 50px;
-    flex-direction: column;
     gap: 20px;
 }
 
-/* sezione chi siamo */
 .chi-siamo img {
-    display: block;
     object-fit: cover;
     border-radius: 50%; /*maschera sferica*/
     max-width: 100%;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
-    transition: box-shadow 0.3s ease; /*transizione per l'hover*/
 }
 
-.chi-siamo img:hover {
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
-}
+/* sezione timeline */
+
+/*footer*/
