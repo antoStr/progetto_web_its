@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arredo&Stile | Home Isometrica</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
 
     <header>
         <div class="logo">Room<span>-</span>Ati</div>
         <nav>
             <ul>
-                <li><a href="#">Soggiorno</a></li>  <!--inserire il path al posto di #-->
+                <li><a href="#">Soggiorno</a></li> <!--inserire il path al posto di #-->
                 <li><a href="camera_da_letto.html">Camera da Letto</a></li>
                 <li><a href="#">Cucina</a></li>
                 <li><a href="#">Offerte</a></li>
@@ -23,22 +25,90 @@
         </div>
     </header>
 
+    <section class="description">
+        <h1>Esplora la tua casa ideale</h1>
+        <p>
+            Naviga nel nostro catalogo interattivo. Clicca sui punti luce per scoprire
+            i dettagli di ogni pezzo della nostra collezione esclusiva.
+        </p>
+    </section>
+
     <main class="isometric-container">
         <div class="room-wrapper">
             <img src="../img/stanza4k.png" alt="Stanza Isometrica" class="base-room">
-            
-            <a href="/prodotti/divano" class="hotspot" style="top: 60%; left: 54%;" data-name="Divano Modulare - €899"></a>
-            <a href="camera_da_letto.html" class="hotspot" style="top: 55%; left: 75%;" data-name="Letto Minimal - €1.200"></a>
-            <a href="/prodotti/tavolo" class="hotspot" style="top: 48%; left: 30%;" data-name="Tavolo Pranzo - €550"></a>
+
+            <a href="/prodotti/divano" class="hotspot" style="top: 60%; left: 54%;"
+                data-name="Divano Modulare - €899"></a>
+            <a href="camera_da_letto.html" class="hotspot" style="top: 55%; left: 75%;"
+                data-name="Letto Minimal - €1.200"></a>
+            <a href="/prodotti/tavolo" class="hotspot" style="top: 48%; left: 30%;"
+                data-name="Tavolo Pranzo - €550"></a>
             <a href="/prodotti/tavolo" class="hotspot" style="top: 68%; left: 46%;" data-name="Tavolino - €330"></a>
-            <a href="/prodotti/tavolo" class="hotspot" style="top: 30%; left: 50%;" data-name="Cucina Completa - da €15.000"></a>
+            <a href="/prodotti/tavolo" class="hotspot" style="top: 30%; left: 50%;"
+                data-name="Cucina Completa - da €15.000"></a>
             <!--ho utilizzato le percentuali per posizionare gli hotspot-->
         </div>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Room-Ati - Design d'Interni Digitale</p>
+
+    <section class="bottom_news">
+
+        <div class="icone_e_testo">
+            <div class="icone_bottom">🌿</div>
+            <h3>Materiali Sostenibili</h3>
+            <p>Utilizziamo solo legno certificato e tessuti organici per un impatto minimo
+                sull'ambiente.</p>
+        </div>
+
+        <div class="icone_e_testo">
+            <div class="icone_bottom">✨</div>
+            <h3>Design Italiano</h3>
+            <p>Ogni pezzo è progettato dai migliori designer per unire estetica e
+                funzionalità.</p>
+        </div>
+
+        <div class="icone_e_testo">
+            <div class="icone_bottom">🚚</div>
+            <h3>Consegna Premium</h3>
+            <p>Spedizione assicurata e montaggio professionale incluso per ordini sopra i €2.000.</p>
+        </div>
+
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+
+            <div class="footer-section">
+                <h3>Room-Ati</h3>
+                <p>Dal 1999 trasformiamo i tuoi spazi in esperienze di design uniche. 
+                    Qualità, stile e comfort per ogni stanza della tua casa.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contatti</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Via Washington, Pizzo Calabro</li>
+                    <li><i class="fas fa-phone"></i> +666 3629</li>
+                    <li><i class="fas fa-envelope"></i> info@Room-Ati.com</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Iscriviti per ricevere aggiornamenti e offerte.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="La tua email" required>
+                    <button type="submit">Iscriviti</button>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Room-Ati. Tutti i diritti riservati.</p>
+        </div>
     </footer>
-    
+
 </body>
+
 </html>

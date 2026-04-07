@@ -1,6 +1,8 @@
 :root {
-    --primary-color: #2c2c2c; /*Imposto la palette di colori*/
-    --accent-color: #bfa07d; /* Tonalità legno/beige */
+    --primary-color: #2c2c2c;
+    /*Imposto la palette di colori*/
+    --accent-color: #bfa07d;
+    /* Tonalità legno/beige */
     --bg-color: #f4f1ee;
 }
 
@@ -9,6 +11,7 @@ body {
     font-family: 'Helvetica Neue', sans-serif;
     background-color: var(--bg-color);
     color: var(--primary-color);
+    
 }
 
 header {
@@ -16,48 +19,100 @@ header {
     justify-content: space-between; /*aggiunge spaziatura SOLO tra gli elementi */
     align-items: center; /*allinea gli elementi lungo l'asse secondario*/
     padding: 20px 5%;
-    background: white;
+
+    position: sticky;
+    top: 0; /* Fondamentale: fissa l'header alla cima della pagina */
+    z-index: 1000; /* Serve a far sì che l'header stia sopra agli altri elementi */
+    background-color: #ffffff; /* serve a non far vedere il contenuto sotto  */
+
 }
 
-.logo { text-decoration: none; font-weight: bold; font-size: 24px; color: var(--primary-color);}
-.logo span { color: var(--accent-color); }
-.logo:hover { color: var(--accent-color); transition: all 0.3s ease;} /* Diventa rosso al passaggio */
+
+.logo {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+    color: var(--primary-color);
+}
+
+.logo span {
+    color: var(--accent-color);
+}
+
+.logo:hover {
+    color: var(--accent-color);
+    transition: all 0.3s ease;
+}
+
+/* Diventa rosso al passaggio */
 
 .icon a {
-    text-decoration: none; /* Rimuove la sottolineatura */
-    color: inherit;        /* Fa sì che l'icona mantenga il suo colore originale */
-    display: inline-block; /* Aiuta a gestire meglio lo spazio cliccabile */
+    text-decoration: none;
+    /* Rimuove la sottolineatura */
+    color: inherit;
+    /* Fa sì che l'icona mantenga il suo colore originale */
+    display: inline-block;
+    /* Aiuta a gestire meglio lo spazio cliccabile */
 }
 
-nav ul { list-style: none; display: flex; gap: 20px; }
-nav a { text-decoration: none; color: var(--primary-color); font-weight: 500; }
+.description {
+    text-align: center;
+    
+}
+
+.description p {
+    color: rgb(53, 53, 53);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+
+nav a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 500;
+}
 
 /* Contenitore Immagine */
-.isometric-container {  /*e come se fosse la parete su cui è appesa l'immagine*/
+.isometric-container {
+    /*e come se fosse la parete su cui è appesa l'immagine*/
     display: flex;
-    justify-content: center; /*mantiene l'immagine sempre al centro*/
+    justify-content: center;
+    /*mantiene l'immagine sempre al centro*/
     padding: 50px 0;
 }
 
-.room-wrapper {  /*serve a tenere gli hotspot nei limiti dell'immagine*/
-    position: relative; /*e come se fosse la cornice dell'img, "impacchetta insieme"hotspot e immagine*/
+.room-wrapper {
+    /*serve a tenere gli hotspot nei limiti dell'immagine*/
+    position: relative;
+    /*e come se fosse la cornice dell'img, "impacchetta insieme"hotspot e immagine*/
     max-width: 1000px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
 
-.base-room {  /**/
-    display: block; /*'immagine si comporta come un solido blocco rettangolare, eliminando spazi vuoti indesiderati nel footer o nel wrapper.*/
-    width: 100%; /*serve ad adattarsi al massino alle dimensioni stabilite*/
-    height: auto; /*nel wrapper, altrimenti rimarrebbe di dim fissa a prescindere*/
-    border-radius: 8px;/*da pc, telefono, ecc. ecc.*/
+.base-room {
+    /**/
+    display: block;
+    /*'immagine si comporta come un solido blocco rettangolare, eliminando spazi vuoti indesiderati nel footer o nel wrapper.*/
+    width: 100%;
+    /*serve ad adattarsi al massino alle dimensioni stabilite*/
+    height: auto;
+    /*nel wrapper, altrimenti rimarrebbe di dim fissa a prescindere*/
+    border-radius: 8px;
+    /*da pc, telefono, ecc. ecc.*/
     transition: transform 0.5s ease;
 }
 
 
 /* Hotspot (i cerchi cliccabili) */
 .hotspot {
-    position: absolute; /*posizione assoluta ancorata all'immagine di base grazie al wrapper*/
+    position: absolute;
+    /*posizione assoluta ancorata all'immagine di base grazie al wrapper*/
     width: 30px;
     height: 30px;
     background: rgba(255, 255, 255, 0.8);
@@ -79,7 +134,8 @@ nav a { text-decoration: none; color: var(--primary-color); font-weight: 500; }
     position: absolute;
     bottom: 40px;
     left: 50%;
-    transform: translateX(-50%); /*DA COMMENTARE*/
+    transform: translateX(-50%);
+    /*DA COMMENTARE*/
     background: var(--primary-color);
     color: white;
     padding: 5px 12px;
@@ -95,9 +151,139 @@ nav a { text-decoration: none; color: var(--primary-color); font-weight: 500; }
     opacity: 1;
 }
 
-.room-wrapper:hover .base-room { /*Quando il mouse dell'utente entra nell'area del Wrapper, trova l'immagine Base-Room al suo interno e applicale queste modifiche.*/
-    transform: scale(1.02); /* Effetto leggero ingrandimento 1.02*/
+.room-wrapper:hover .base-room {
+    /*Quando il mouse dell'utente entra nell'area del Wrapper, trova l'immagine Base-Room al suo interno e applicale queste modifiche.*/
+    transform: scale(1.02);
+    /* Effetto leggero ingrandimento 1.02*/
 }
+
+.bottom_news {
+    background-color: var(--bg-color);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin: 0px;
+    padding: 10px;
+    justify-content: space-between; /*aggiunge spaziatura SOLO tra gli elementi */
+}
+
+.icone_e_testo {
+    padding: 30px;
+    max-width: 270px;
+   
+}
+
+.icone_e_testo h3{
+    margin-bottom: 0px;
+}
+
+.icone_bottom {
+    display: inline-block;
+    background-color: #e6e6e6c5;
+    padding: 15px;
+    /* Spazio tra l'icona e il bordo dello sfondo */
+    border-radius: 5px;
+    line-height: 0;
+    /* Rimuove spazi vuoti extra sotto l'icona */
+}
+
+
+
+
+/*footer*/
+/*impostazioni  di base */
+footer {
+    font-family: sans-serif;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    padding: 40px 0 20px;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin-left: 100px;
+    display: flex;
+    flex-wrap: wrap; /* Permette di andare a capo su mobile */
+    gap: 50px;
+    padding: 0 20px;
+    padding-left: 5px;
+}
+
+.footer-section {
+    flex: 1;/* Distribuisce lo spazio equamente */
+    min-width: 250px;/* Evita che le colonne diventino troppo strette */
+}
+
+.footer-section h3 {
+    color: var(--accent-color);
+    /* Colore d'accento */
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.footer-section p {
+    line-height: 1.6;
+    color: #bbb;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+    color: #bbb;
+}
+
+/* Form Newsletter */
+.newsletter-form {
+    display: flex;
+    gap: 5px;
+    margin-top: 15px;
+}
+
+.newsletter-form button{
+    color: var(--primary-color);
+}
+
+.newsletter-form input {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    flex: 1;
+}
+
+.newsletter-form button {
+    padding: 10px 15px;
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.newsletter-form button:hover {
+    background-color: var(--bg-color);
+}
+
+/* Parte inferiore */
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+
+
+
+
+
+
 
 /* --- Stili Pagina Catalogo --- */
 
@@ -129,7 +315,7 @@ nav a { text-decoration: none; color: var(--primary-color); font-weight: 500; }
     background: white;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
 }
 
@@ -194,12 +380,11 @@ nav a { text-decoration: none; color: var(--primary-color); font-weight: 500; }
     background-color: var(--accent-color);
 }
 
-/* Classe Utility per link attivo */
+/* Classe Utility per link attivo 
 nav a.active {
     border-bottom: 2px solid var(--accent-color);
-}
+}*/
 
-/* 
 @media screen and (min-width: 768px) {
     body {
         background-color: lightgrey;
@@ -207,7 +392,7 @@ nav a.active {
 }
 
 /* Desktop (dai 1024px in su) */
-/* @media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
     .container {
         width: 80%;
         margin: 0 auto;
@@ -218,4 +403,4 @@ nav a.active {
     body {
         background-color: lightgrey;
     }
-}  */
+}
