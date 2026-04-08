@@ -23,17 +23,12 @@
         <div class="logo">Room<span>-</span>Ati</div>
         <nav>
             <ul>
-                <li><a href="camera_da_letto.html">Prodotti</a></li> <!--inserire il path al posto di #-->
+                <li><a href="prodotti.html">Prodotti</a></li> <!--inserire il path al posto di #-->
                 <li><a href="camera_da_letto.html">Offerte</a></li>
                 <li><a href="#">Contattaci</a></li>
                 <li><a href="#">Chi Siamo</a></li>
             </ul>
         </nav>
-        <div class="icon" onclick="clearCart()">
-            <span class="cart-icon"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-            </span>
-            <span id="cart-count" class="cart-badge">0</span>
-        </div>
     </header>
 
 
@@ -148,6 +143,14 @@
         </div>
     </footer>
 
+    <div class="cart-floating-bubble" onclick="toggleCart()">
+        <div class="icon" onclick="clearCart()">
+            <span class="cart-icon">
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            </span>
+            <span id="cart-count" class="cart-badge">0</span>
+        </div>
+    </div>
 </body>
 
 </html>

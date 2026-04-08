@@ -21,7 +21,7 @@ body {
 header {
     display: flex;
     /*trasforma l'header in un container di tipo flex*/
-    justify-content: space-between;
+    justify-content: space-around;
     /*aggiunge spaziatura SOLO tra gli elementi */
     align-items: center;
     /*allinea gli elementi lungo l'asse secondario*/
@@ -60,40 +60,67 @@ header nav ul {
     transition: all 0.3s ease;
 }
 
-.icon a {
-    text-decoration: none; /* Rimuove la sottolineatura */
-    color: inherit; /* Fa sì che l'icona mantenga il suo colore originale */
+/*CARRELLO FLUTTUANTE*/
+.cart-floating-bubble {
+    position: fixed;   /* Rimane fisso nello schermo */
+    bottom: 30px;      /* Distanza dal fondo */
+    right: 30px;       /* Distanza da destra */
+    width: 70px;       /* Dimensioni della bolla */
+    height: 70px;
+    background-color: var(--primary-color); /* O var(--accent-color) per farlo risaltare */
+    border-radius: 50%; /* Lo rende un cerchio perfetto */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    font-size: 30px; /* Dimensione dell'icona */
+    z-index: 9999;     /* Sempre sopra a tutto il resto */
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.3s;
 }
 
-.icon{
-    position: relative;  /* FONDAMENTALE: blocca il badge qui dentro */
-    display: inline-block; /* Aiuta a gestire meglio lo spazio cliccabile */
-    vertical-align: middle;
-}
-
-.cart-badge {
-    position: absolute;
-    top: -8px;      /* Sposta verso l'alto */
-    right: -14px;   /* Sposta verso destra */
+.cart-floating-bubble:hover {
+    transform: scale(1.1); /* Effetto rimbalzo al passaggio del mouse */
     background-color: var(--accent-color);
+}
+
+/* Sistemiamo le icone all'interno */
+.cart-floating-bubble .icon a {
+    color: white;      /* Colore icona su sfondo scuro */
+    font-size: 28px;
+}
+
+/* Sistemiamo la posizione del badge (il numeretto) */
+.cart-floating-bubble .cart-badge {
+    position: absolute;
+    top: -2px;
+    right: -8px;
+    background-color: #cc0000; /* Rosso acceso */
     color: white;
-    border-radius: 50%; /* Lo rende tondo */
-    padding: 2px 6px;
+    
+    /* --- IL TRUCCO PER IL CERCHIO --- */
+    width: 25px;           /* Larghezza fissa */
+    height: 25px;          /* Altezza fissa uguale alla larghezza */
+    border-radius: 50%;    /* Rende il box un cerchio perfetto */
+    
+    /* --- CENTRATURA DEL NUMERO --- */
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra orizzontalmente */
+    padding-left: 7px;
+    padding-top: 3px;
+
+    /* --- STILE EXTRA --- */
     font-size: 12px;
     font-weight: bold;
     font-family: sans-serif;
-    min-width: 15px;
-    text-align: center;
-    /* Nasconde il badge se il carrello è vuoto (opzionale) */
-    display: none; 
+    border: 2px solid white; /* Crea il distacco visivo dalla bolla scura */
+    box-sizing: border-box;  /* Evita che il bordo allarghi il cerchio */
 }
 
-/* Classe per mostrare il badge quando il numero è > 0 */
-.cart-badge.show {
-    display: block;
-}
+
+
+
+
 
 /*ANIMAZIONE CARRELLO*/
 /* 1. Definiamo l'animazione vera e propria */
@@ -531,7 +558,7 @@ footer {
 .catalog-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 40px 5%;
+    padding: 30px 5%;
 }
 
 .intro-text {
@@ -542,6 +569,11 @@ footer {
 .intro-text h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
+}
+
+.intro-text p {
+    font-size: 1.4rem;
+    margin-top: 10px;
 }
 
 /* Griglia Prodotti */
