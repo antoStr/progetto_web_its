@@ -236,9 +236,7 @@ h3 {
     z-index: 100;
     transition: right 0.3s ease;
     border-left: 2px solid var(--cream);
-    border-bottom: 2px solid var(--cream);
     background-color: var(--charcoal);
-    border-radius: 0 0 0 var(--radius-sm);
   }
 
   /* con -100 è nascosto click js torna a 0 */
