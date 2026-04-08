@@ -20,15 +20,30 @@
 <body>
 
     <header>
-        <div class="logo">Room<span>-</span>Ati</div>
-        <nav>
-            <ul>
-                <li><a href="prodotti.html">Prodotti</a></li> <!--inserire il path al posto di #-->
-                <li><a href="camera_da_letto.html">Offerte</a></li>
-                <li><a href="#">Contattaci</a></li>
-                <li><a href="#">Chi Siamo</a></li>
-            </ul>
-        </nav>
+        <!-- navbar -->
+      <!-- div overlay hamburger hidden -->
+      <div class="nav-overlay" id="navOverlay"></div>
+      <nav class="container-nav">
+        <div class="nav-logo">Room-ati</div>
+        <!-- btn hamburger mobile 768px -->
+        <button class="nav-toggle" id="navToggle">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+          <!-- close btn hamburger -->
+          <li>
+            <button class="nav-close" id="navClose">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </li>
+
+          <li><a href="#">Chi siamo</a></li>
+          <li><a href="#">Renew</a></li>
+          <li><a href="#">Galleria</a></li>
+          <li><a href="#" class="nav-cta">Contattaci</a></li>
+        </ul>
+      </nav>
     </header>
 
 
@@ -151,6 +166,8 @@
             <span id="cart-count" class="cart-badge">0</span>
         </div>
     </div>
+
+    <script src="../js/script.js"></script>
 </body>
 
 </html>
