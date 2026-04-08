@@ -13,7 +13,10 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Jost:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Progetto Renew</title>
   </head>
@@ -21,6 +24,7 @@
   <body>
     <!-- header -->
     <header>
+      <!-- navbar -->
       <nav class="container-nav">
         <div class="nav-logo">Room-ati</div>
         <ul class="nav-links">
@@ -37,13 +41,15 @@
       <!-- Sezione hero -->
       <section class="hero">
         <div class="hero-text">
-          <h1 class="renew-hero-text">Progetto<br /><span class="renew-hero">Renew</span></h1>
+          <h1 class="renew-hero-text">
+            Progetto<br /><span class="renew-hero">Renew</span>
+          </h1>
           <p>
             Renew è il nostro progetto pensato su misura per i nostri clienti
             che vogliono trasformare uno spazio. Ci occupiamo noi di tutto,
             dall'analisi dello spazio fino all'installazione.
           </p>
-          <a href="#" class="cta-btn">Scopri il servizio</a>
+          <a href="#sezione-descrizione" class="cta-btn">Scopri il servizio</a>
         </div>
       </section>
 
@@ -58,7 +64,7 @@
       </section>
 
       <!-- Sezione descrizione -->
-      <section class="description">
+      <section class="description" id="sezione-descrizione">
         <h2>Il rinnovamento completo<br />della tua camera</h2>
         <div class="container-proj">
           <div class="container-article">
@@ -134,8 +140,8 @@
           </div>
           <div class="proj-image">
             <img
-              src="./aec3.png"
-              alt="Gruppo di architetti che effettuano misurazioni per la casa"
+              src="./imgs/architetti.webp"
+              alt="Architetto che traccia misurazioni su una planimetria con un compasso"
             />
           </div>
         </div>
@@ -147,12 +153,12 @@
           <span class="section-label">I nostri lavori</span>
           <h2>Spazi che parlano<br />di te</h2>
           <div class="galleria-imgs">
-            <img src="./room1.jpg" alt="img" />
-            <img src="./room2.webp" alt="img" />
-            <img src="./room3.jpg" alt="img" />
-            <img src="./room4.webp" alt="img" />
-            <img src="./room5.webp" alt="img" />
-            <img src="./room6.jpg" alt="img" />
+            <img src="./imgs/stanza1.webp" alt="Camera da letto luminosa e moderna con soffitto in legno, grandi finestre panoramiche e una panca." />
+            <img src="./imgs/stanza2.webp" alt="Ccamera da letto accogliente in stile boho, immersa nel verde delle piante e scaldata dal sole pomeridiano." />
+            <img src="./imgs/stanza3.webp" alt="Una camera da letto rustica con pareti in legno scuro, letto a quadri e due porte bianche" />
+            <img src="./imgs/stanza4.webp" alt="Stanza da letto accogliente e raccolta, alte librerie, luci soffuse, piante e un morbido pouf." />
+            <img src="./imgs/stanza5.webp" alt="Camera da letto lussuosa e moderna con illuminazione scenografica, grande televisore a parete e arredamento di design ricercato." />
+            <img src="./imgs/stanza6.webp" alt="Camera da letto elegante con testiera imbottita retroilluminata, comodini in legno, applique dorate e sedia in rattan." />
           </div>
         </div>
       </section>
@@ -168,7 +174,14 @@
               <h3>Ultra professionalit&agrave;</h3>
               <blockquote>
                 <p>
-                  Non sapevo da dove cominciare per rinnovare la mia camera, ma il team di Renew mi ha messo subito a mio agio. Dalla misurazione iniziale fino all'installazione finale, ogni fase è stata gestita con cura e precisione. La riproduzione 3D è stata una sorpresa: vedere la mia camera trasformata ancora prima di acquistare un singolo mobile mi ha dato una sicurezza enorme. Il risultato finale ha superato ogni aspettativa. Consiglio a tutti.
+                  Non sapevo da dove cominciare per rinnovare la mia camera, ma
+                  il team di Renew mi ha messo subito a mio agio. Dalla
+                  misurazione iniziale fino all'installazione finale, ogni fase
+                  è stata gestita con cura e precisione. La riproduzione 3D è
+                  stata una sorpresa: vedere la mia camera trasformata ancora
+                  prima di acquistare un singolo mobile mi ha dato una sicurezza
+                  enorme. Il risultato finale ha superato ogni aspettativa.
+                  Consiglio a tutti.
                 </p>
               </blockquote>
               <div class="recensione-footer">
@@ -182,7 +195,14 @@
               <h3>Servizio over the top!</h3>
               <blockquote>
                 <p>
-                  Quello che mi ha colpita di più è stato il servizio post-vendita: pensavo che una volta montati i mobili il rapporto si chiudesse lì, invece sono stati disponibili anche settimane dopo per un piccolo aggiustamento. Il progetto personalizzato ha rispettato esattamente la mia visione, e si sono occupati anche dello smaltimento dei vecchi mobili senza che dovessi preoccuparmi di nulla. Un servizio completo e davvero affidabile.
+                  Quello che mi ha colpita di più è stato il servizio
+                  post-vendita: pensavo che una volta montati i mobili il
+                  rapporto si chiudesse lì, invece sono stati disponibili anche
+                  settimane dopo per un piccolo aggiustamento. Il progetto
+                  personalizzato ha rispettato esattamente la mia visione, e si
+                  sono occupati anche dello smaltimento dei vecchi mobili senza
+                  che dovessi preoccuparmi di nulla. Un servizio completo e
+                  davvero affidabile.
                 </p>
               </blockquote>
               <div class="recensione-footer">
@@ -206,10 +226,6 @@
               <p>Progettazione su misura</p>
             </div>
             <div class="incentivo-item">
-              <i class="fa-solid fa-user-shield"></i>
-              <p>Garanzia post installazione</p>
-            </div>
-            <div class="incentivo-item">
               <i class="fa-solid fa-compass-drafting"></i>
               <p>Design professionale</p>
             </div>
@@ -222,6 +238,10 @@
               <p>Materiali sostenibili</p>
             </div>
             <div class="incentivo-item">
+              <i class="fa-solid fa-user-shield"></i>
+              <p>Garanzia post installazione</p>
+            </div>
+            <div class="incentivo-item">
               <i class="fa-solid fa-headset"></i>
               <p>Supporto dedicato</p>
             </div>
@@ -231,7 +251,7 @@
             </div>
             <div class="incentivo-item">
               <i class="fa-solid fa-star"></i>
-              <p>Materiali di qualità</p>
+              <p>Materiali di qualità e sostenibili</p>
             </div>
           </div>
         </div>
@@ -249,7 +269,7 @@
     <footer>
       <div class="container-footer">
         <div class="box-1">
-          <h3>Renew</h3>
+          <h3>Room-ati</h3>
           <p>
             Trasformiamo spazi in esperienze. Da oltre dieci anni al fianco dei
             nostri clienti per realizzare ambienti unici e funzionali.

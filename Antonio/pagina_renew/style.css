@@ -128,7 +128,8 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   z-index: 100;
 }
@@ -162,15 +163,15 @@ h3 {
 }
 
 .nav-cta {
-  background-color: var(--gold) !important;
-  color: var(--white) !important;
+  background-color: var(--gold) ;
+  color: var(--white);
   padding: 8px 22px;
   border-radius: 50px;
 }
 
-.nav-cta:hover {
-  background-color: var(--gold-light) !important;
-  color: var(--charcoal) !important;
+.nav-links li .nav-cta:hover {
+  background-color: var(--gold-light);
+  color: var(--charcoal);
 }
 
 @media (max-width: 768px) {
@@ -182,13 +183,13 @@ h3 {
 /* SEZIONE HERO */
 
 .hero {
-  background-image: url(./1347182.png);
+  background-image: url(./imgs/heroimage.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  backdrop-filter: blur(10px);
-  min-height: 92vh;
+  min-height: 85vh;
   margin: 24px;
+  margin-top: 90px;
   border-radius: var(--radius-lg);
   display: flex;
   align-items: flex-end;
@@ -204,7 +205,7 @@ h3 {
   inset: 0;
   background: linear-gradient(
     to right,
-    rgba(20, 16, 12, 0.737) 0%,
+    rgba(20, 16, 12, 0.971)0%,
     rgba(20, 16, 12, 0.2) 100%,
     transparent 100%
   );
@@ -258,16 +259,17 @@ h3 {
   line-height: 1.8;
 }
 
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
   .hero {
+    margin-top: 90px;
     min-height: 70vh;
     padding: 60px 40px;
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .hero {
-    margin: 12px;
+    margin-top: 90px;
     border-radius: var(--radius-md);
     min-height: 80vh;
     padding: 40px 28px;
@@ -357,10 +359,6 @@ h3 {
   transition: background 0.2s;
 }
 
-.list-element:hover {
-  background-color: rgba(184, 146, 74, 0.05);
-}
-
 .icon-wrap {
   flex-shrink: 0;
   width: 52px;
@@ -370,20 +368,11 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.3s;
-}
-
-.list-element:hover .icon-wrap {
-  background-color: var(--gold-light);
 }
 
 .icon-wrap i {
   font-size: 1.3rem;
   color: var(--charcoal);
-}
-
-.list-element:hover .icon-wrap i {
-  color: var(--white);
 }
 
 .step-text h3 {
@@ -461,13 +450,13 @@ h3 {
   min-height: 300px;
   background-color: var(--cream-dark);
   border-radius: var(--radius-md);
-  padding: 40px;
+  padding: 20px;
 }
 
 .galleria-imgs img {
   box-shadow: var(--shadow-mid);
   border-radius: var(--radius-sm);
-  max-width: 400px;
+  max-width: 545px;
 }
 
 @media screen and (max-width: 768px) {
@@ -519,11 +508,6 @@ h3 {
   align-items: flex-start;
   justify-content: space-between;
   flex-direction: column;
-}
-
-.recensione-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-mid);
 }
 
 .stars {
@@ -591,6 +575,7 @@ h3 {
 }
 
 .incentivo-item {
+  height: 120px;
   width: 200px;
   background-color: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -600,14 +585,6 @@ h3 {
   flex-direction: column;
   align-items: center;
   gap: 14px;
-  transition:
-    background 0.3s,
-    border-color 0.3s;
-}
-
-.incentivo-item:hover {
-  background-color: rgba(184, 146, 74, 0.12);
-  border-color: var(--gold);
 }
 
 .incentivo-item i {
@@ -626,12 +603,12 @@ h3 {
 /* SEZIONE CTA BOTTOM */
 
 .cta-b {
-  background-color: var(--cream-dark) !important;
-  padding: 100px 5% !important;
+  background-color: var(--cream-dark);
+  padding: 100px 5%;
 }
 
 .cta-b h2 {
-  font-size: clamp(2rem, 4vw, 3.2rem) !important;
+  font-size: 2rem;
 }
 
 /* FOOTER */
