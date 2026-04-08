@@ -4,33 +4,50 @@
     --accent-color: #bfa07d;
     /* Tonalità legno/beige */
     --bg-color: #f4f1ee;
+    --charcoal: #1c1c1c;
+
+    --font-display: "Cormorant Garamond", Georgia, serif;
+    --font-hero: "PlayFair Display", Georgia, serif;
+    --font-body: "Jost", sans-serif;
 }
 
 body {
     margin: 0;
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: var(--font-display);
     background-color: var(--bg-color);
     color: var(--primary-color);
-    
 }
 
 header {
-    display: flex; /*trasforma l'header in un container di tipo flex*/
-    justify-content: space-between; /*aggiunge spaziatura SOLO tra gli elementi */
-    align-items: center; /*allinea gli elementi lungo l'asse secondario*/
+    display: flex;
+    /*trasforma l'header in un container di tipo flex*/
+    justify-content: space-between;
+    /*aggiunge spaziatura SOLO tra gli elementi */
+    align-items: center;
+    /*allinea gli elementi lungo l'asse secondario*/
     padding: 30px 5%;
 
     position: sticky;
-    top: 0; /* Fondamentale: fissa l'header alla cima della pagina */
-    z-index: 1000; /* Serve a far sì che l'header stia sopra agli altri elementi */
-    background-color: #ffffff; /* serve a non far vedere il contenuto sotto  */
+    top: 0;
+    /* Fondamentale: fissa l'header alla cima della pagina */
+    z-index: 1000;
+    /* Serve a far sì che l'header stia sopra agli altri elementi */
+    background-color: #ffffff;
+    /* serve a non far vedere il contenuto sotto  */
+    font-size: 24px;
+}
+
+header nav ul {
+    letter-spacing: 1.3px;
+    gap: 4vw;
+    /* Lo spazio sarà il 4% della larghezza dello schermo */
 }
 
 
 .logo {
     text-decoration: none;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 40px;
     color: var(--primary-color);
 }
 
@@ -43,24 +60,73 @@ header {
     transition: all 0.3s ease;
 }
 
-/* Diventa rosso al passaggio */
-
 .icon a {
-    text-decoration: none;
-    /* Rimuove la sottolineatura */
-    color: inherit;
-    /* Fa sì che l'icona mantenga il suo colore originale */
-    display: inline-block;
-    /* Aiuta a gestire meglio lo spazio cliccabile */
+    text-decoration: none; /* Rimuove la sottolineatura */
+    color: inherit; /* Fa sì che l'icona mantenga il suo colore originale */
+    cursor: pointer;
+    font-size: 30px; /* Dimensione dell'icona */
+}
+
+.icon{
+    position: relative;  /* FONDAMENTALE: blocca il badge qui dentro */
+    display: inline-block; /* Aiuta a gestire meglio lo spazio cliccabile */
+    vertical-align: middle;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -8px;      /* Sposta verso l'alto */
+    right: -14px;   /* Sposta verso destra */
+    background-color: var(--accent-color);
+    color: white;
+    border-radius: 50%; /* Lo rende tondo */
+    padding: 2px 6px;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: sans-serif;
+    min-width: 15px;
+    text-align: center;
+    /* Nasconde il badge se il carrello è vuoto (opzionale) */
+    display: none; 
+}
+
+/* Classe per mostrare il badge quando il numero è > 0 */
+.cart-badge.show {
+    display: block;
+}
+
+/*ANIMAZIONE CARRELLO*/
+/* 1. Definiamo l'animazione vera e propria */
+@keyframes cartBounce {
+    0% {
+        transform: scale(1); /* Dimensione normale */
+    }
+    50% {
+        transform: scale(1.4); /* Si ingrandisce del 40% */
+    }
+    100% {
+        transform: scale(1); /* Torna normale */
+    }
+}
+
+/* 2. Creiamo una classe che applica l'animazione */
+/* L'aggiungeremo e rimuoveremo via JavaScript */
+.cart-badge.animate {
+    animation: cartBounce 0.3s ease-in-out; /* L'animazione dura 0.3 secondi ed è fluida */
 }
 
 
+
+
+
+
+/*-----------------------------------*/
 .corpo_gallery {
-    background:rgb(255, 255, 255);
+    background: rgb(255, 255, 255);
     min-height: 50vh;
     padding: 0;
     margin: 0;
-    margin-bottom: 50px;
+    margin-bottom: 90px;
 }
 
 .gallery {
@@ -72,17 +138,21 @@ header {
     align-items: center;
     scroll-snap-type: x mandatory;
     box-sizing: border-box;
-    scrollbar-width: none; /*nasconde la scrollbar a firefox*/
-    -ms-overflow-style: none; /*nasconde la scrollbar a edge*/
+    scrollbar-width: none;
+    /*nasconde la scrollbar a firefox*/
+    -ms-overflow-style: none;
+    /*nasconde la scrollbar a edge*/
     scroll-behavior: smooth;
 }
 
 .gallery::-webkit-scrollbar {
-    display: none; /*  nasconde la scrolbar a Chrome/Safari */
+    display: none;
+    /*  nasconde la scrolbar a Chrome/Safari */
 }
 
-.gallery-wrapper{
-    position: relative; /* I bottoni si ancorano qui, e il wrapper NON scorre */
+.gallery-wrapper {
+    position: relative;
+    /* I bottoni si ancorano qui, e il wrapper NON scorre */
     width: 100%;
     height: 50vh;
     display: flex;
@@ -90,7 +160,6 @@ header {
 }
 
 /*BOTTONI SCORRIMENTO */
-
 /* Posizionamento dei bottoni */
 .nav-btn {
     position: absolute;
@@ -102,7 +171,8 @@ header {
     height: 50px;
     border-radius: 50%;
     cursor: pointer;
-    z-index: 100; /* Devono stare sopra a tutto */
+    z-index: 100;
+    /* Devono stare sopra a tutto */
     font-size: 1.5rem;
     transition: background 0.3s, scale 0.2s;
 }
@@ -112,13 +182,18 @@ header {
     scale: 1.1;
 }
 
-.prev { left: 20px; }
-.next { right: 20px; }
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
 
 
-
+/*Cartoline*/
 .cards {
-    /* Allinea le card orizzontalmente */  
+    /* Allinea le card orizzontalmente */
     display: flex;
     /* Rimuove i puntini della lista e i margini di default */
     list-style: none;
@@ -128,7 +203,7 @@ header {
 
     /* Permette alla sezione di occupare tutta l'altezza disponibile */
     height: 100%;
-    width: 100%;    
+    width: 100%;
 }
 
 .cards li {
@@ -145,7 +220,7 @@ header {
 
     border-radius: 20px;
     box-shadow: 0 10px 25px var(--primary-color);
-    
+
     /* Ogni card si blocca al centro quando l'utente smette di scorrere */
     scroll-snap-align: center;
     flex: 0 0 70%;
@@ -155,34 +230,45 @@ header {
 }
 
 .cards li img {
-    width: 100%;       /* L'immagine occupa tutta la larghezza del li */
-    height: 100%;      /* L'immagine occupa tutta l'altezza del li */
-    border-radius: 20px; /* Deve coincidere con il border-radius del li */
-    
+    width: 100%;
+    /* L'immagine occupa tutta la larghezza del li */
+    height: 100%;
+    /* L'immagine occupa tutta l'altezza del li */
+    border-radius: 20px;
+    /* Deve coincidere con il border-radius del li */
+
     /* TRUCCO FONDAMENTALE */
-    object-fit: cover; /* Taglia l'immagine per riempire il box senza schiacciarla */
-    object-position: center; /* Centra l'inquadratura dell'immagine */
+    object-fit: cover;
+    /* Taglia l'immagine per riempire il box senza schiacciarla */
+    object-position: center;
+    /* Centra l'inquadratura dell'immagine */
     display: block;
 }
 
 .card-text {
-    position: absolute; /* Si posiziona rispetto al 'li' */
-    top: 50%;           /* Sposta il bordo superiore al 50% dell'altezza del li */
-    left: 50%;          /* Sposta il bordo sinistro al 50% della larghezza del li */
-    transform: translate(-50%, -50%); /* TRUCCO: sposta il testo indietro del 50% della SUA stessa dimensione per centrarlo perfettamente */
-    
+    position: absolute;
+    /* Si posiziona rispetto al 'li' */
+    top: 50%;
+    /* Sposta il bordo superiore al 50% dell'altezza del li */
+    left: 50%;
+    /* Sposta il bordo sinistro al 50% della larghezza del li */
+    transform: translate(-50%, -50%);
+    /* TRUCCO: sposta il testo indietro del 50% della SUA stessa dimensione per centrarlo perfettamente */
+
     /* Stile estetico del testo */
     color: white;
-    font-family: 'Montserrat', sans-serif; /* Un font carino */
+    font-family: var(--font-hero);
     font-size: 2rem;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 2px;
-    
+
     /* Opzionale: migliora la leggibilità */
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); 
-    white-space: nowrap; /* Impedisce al testo di andare a capo se lungo */
-    z-index: 10;         /* Assicura che stia sopra l'immagine */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    white-space: nowrap;
+    /* Impedisce al testo di andare a capo se lungo */
+    z-index: 10;
+    /* Assicura che stia sopra l'immagine */
 }
 
 /* Crea uno strato scuro sopra l'immagine */
@@ -193,19 +279,23 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.3); /* Nero al 30% di opacità */
+    background: rgba(0, 0, 0, 0.3);
+    /* Nero al 30% di opacità */
     border-radius: 20px;
-    z-index: 5; /* Sopra l'img (z-index predefinito), sotto il testo (z-index 10) */
+    z-index: 5;
+    /* Sopra l'img (z-index predefinito), sotto il testo (z-index 10) */
 }
 
 
 .description {
+
     text-align: center;
-    
+    font-size: 1.4rem;
 }
 
 .description p {
     color: rgb(53, 53, 53);
+    font-size: 1.6rem;
 }
 
 nav ul {
@@ -308,16 +398,20 @@ nav a {
     align-items: center;
     margin: 0px;
     padding: 10px;
-    justify-content: space-between; /*aggiunge spaziatura SOLO tra gli elementi */
+    padding-left: 100px;
+    padding-right: 100px;
+    justify-content: space-between;
+    /*aggiunge spaziatura SOLO tra gli elementi */
+
 }
 
 .icone_e_testo {
     padding: 30px;
     max-width: 270px;
-   
+
 }
 
-.icone_e_testo h3{
+.icone_e_testo h3 {
     margin-bottom: 0px;
 }
 
@@ -347,15 +441,18 @@ footer {
     max-width: 1100px;
     margin-left: 100px;
     display: flex;
-    flex-wrap: wrap; /* Permette di andare a capo su mobile */
+    flex-wrap: wrap;
+    /* Permette di andare a capo su mobile */
     gap: 50px;
     padding: 0 20px;
-    padding-left: 5px;
+    padding-left: 200px;
 }
 
 .footer-section {
-    flex: 1;/* Distribuisce lo spazio equamente */
-    min-width: 250px;/* Evita che le colonne diventino troppo strette */
+    flex: 1;
+    /* Distribuisce lo spazio equamente */
+    min-width: 250px;
+    /* Evita che le colonne diventino troppo strette */
 }
 
 .footer-section h3 {
@@ -387,7 +484,7 @@ footer {
     margin-top: 15px;
 }
 
-.newsletter-form button{
+.newsletter-form button {
     color: var(--primary-color);
 }
 
