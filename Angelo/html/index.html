@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arredo&Stile | Home Isometrica</title>
     <link rel="stylesheet" href="../css/style.css">
+    <script src="https://kit.fontawesome.com/3063ad3f8f.js" crossorigin="anonymous"></script>
+    <script src="../js/bottoni_scorrimento.js"></script>
 </head>
 
 <body>
@@ -21,27 +23,35 @@
             </ul>
         </nav>
         <div class="icon">
-            <span><a href="#">🛒</a></span>
+            <span><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></span>
         </div>
     </header>
 
     <section class="corpo_gallery">
-        <section class="gallery">
-            <ul class="cards">
-                <li>
-                    <img src="https://images.unsplash.com/photo-1633505899118-4ca6bd143043?q=80&w=2532&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Offerte Soggiorno">
-                    <div class="card-text">Offerte Soggiorno</div>
-                </li>
-                <li>
-                    <img src="https://images.unsplash.com/photo-1617228069096-4638a7ffc906?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Offerte Ristoratori">
-                    <div class="card-text">Puglia</div>
-                </li>
-                <li>
-                    <img src="https://plus.unsplash.com/premium_photo-1683121865978-0ab3d5421993?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fHw%3D" alt="Offerte Ristoratori">
-                    <div class="card-text">Puglia</div>
-                </li>
-            </ul>
-        </section>
+        <div class="gallery-wrapper">
+            <button class="nav-btn prev" onclick="scrollGallery(-1)">&#10094</button>
+            <button class="nav-btn next" onclick="scrollGallery(1)">&#10095</button>
+
+            <section class="gallery">
+                <ul class="cards">
+                    <li>
+                        <img src="https://images.unsplash.com/photo-1633505899118-4ca6bd143043?q=80&w=2532&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Offerte Soggiorno">
+                        <div class="card-text">Offerte Soggiorno</div>
+                    </li>
+                    <li>
+                        <img src="https://images.unsplash.com/photo-1617228069096-4638a7ffc906?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Offerte Ristoratori">
+                        <div class="card-text">Puglia</div>
+                    </li>
+                    <li>
+                        <img src="https://plus.unsplash.com/premium_photo-1683121865978-0ab3d5421993?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fHw%3D"
+                            alt="Offerte Ristoratori">
+                        <div class="card-text">Puglia</div>
+                    </li>
+                </ul>
+            </section>
+        </div>
     </section>
 
 
