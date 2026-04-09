@@ -421,7 +421,7 @@ body {
 
   /* Stile estetico del testo */
   color: white;
-  font-family: var(--font-hero);
+  font-family: var(--font-display);
   font-size: 2rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -858,16 +858,13 @@ footer {
   cursor: pointer;
   font-weight: 600;
   transition: background 0.3s;
+  text-decoration: none;
+  text-align: center;
 }
 
 .add-to-cart:hover {
   background-color: var(--accent-color);
 }
-
-/* Classe Utility per link attivo 
-nav a.active {
-    border-bottom: 2px solid var(--accent-color);
-}*/
 
 @media screen and (min-width: 768px) {
   body {
