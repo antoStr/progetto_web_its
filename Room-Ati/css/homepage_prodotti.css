@@ -285,7 +285,7 @@ body {
 /*-----------------------------------*/
 .corpo_gallery {
   background: rgb(255, 255, 255);
-  min-height: 50vh;
+  min-height: 50vh;  
   padding: 0;
   margin: 0;
   margin-bottom: 90px;
@@ -320,6 +320,7 @@ body {
   display: flex;
   align-items: center;
   margin-top: 72px;
+
 }
 
 /*BOTTONI SCORRIMENTO */
@@ -366,7 +367,7 @@ body {
   gap: 20px;
 
   /* Permette alla sezione di occupare tutta l'altezza disponibile */
-  height: 90%;
+  height: 100%;
   width: 100%;
 }
 
