@@ -93,12 +93,6 @@ body {
   color: var(--charcoal) !important;
 }
 
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-  }
-}
-
 /* sezione hero */
 .hero {
     background-color: var(--cream-dark);
@@ -116,6 +110,7 @@ body {
     color: var(--text-body);
     font-weight: 700;
 }
+
 .hero-text p {
     font-size: 1.4rem;
     color: var(--text-muted);
@@ -342,7 +337,8 @@ body {
     position: relative;
     transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
-.timeline-fine-btn:hover{
+
+.timeline-fine-btn:hover {
     background-color: var(--gold);
     color: var(--cream-dark);
     box-shadow: var(--shadow-mid);
@@ -350,7 +346,6 @@ body {
 }
 
 /* footer */
-
 footer {
   background-color: var(--charcoal);
   color: rgba(255, 255, 255, 0.75);
@@ -434,9 +429,7 @@ footer {
   justify-content: center;
   color: rgba(255, 255, 255, 0.65);
   font-size: 0.95rem;
-  transition:
-    background 0.2s,
-    color 0.2s;
+  transition: background 0.2s, color 0.2s;
 }
 
 .social-links a:hover {
@@ -456,20 +449,7 @@ footer {
   letter-spacing: 0.05em;
 }
 
-/* responsive */
-
-@media (max-width: 768px) {
-  .container-footer {
-    flex-direction: column;
-    gap: 40px;
-  }
-
-  .box-1,
-  .box-2,
-  .box-3 {
-    max-width: 100%;
-  }
-}
+/*responsive*/
 
 @media (max-width: 900px) {
     .hero {
@@ -498,7 +478,7 @@ footer {
         left: 20px;
     }
 
-    /*sezione per avere un singolo tipo di freccia su mobile*/
+    /* freccia unica su mobile */
     .timeline-evento:nth-child(odd) .timeline-card::after,
     .timeline-evento:nth-child(even) .timeline-card::after {
         left: -9px;
@@ -523,5 +503,22 @@ footer {
     .timeline-fine {
         align-items: flex-start;
         padding-left: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .container-footer {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .box-1,
+    .box-2,
+    .box-3 {
+        max-width: 100%;
     }
 }

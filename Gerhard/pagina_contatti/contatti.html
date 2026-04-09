@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatti</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Jost:wght@300;400;500&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="contatti.css">
+</head>
+
+<body>
+
+    <!-- header -->
+    <header>
+        <nav class="container-nav">
+            <div class="nav-logo">Room-ati</div>
+            <ul class="nav-links">
+                <li><a href="#">Chi siamo</a></li>
+                <li><a href="#">Renew</a></li>
+                <li><a href="#">Galleria</a></li>
+                <li><a href="#" class="nav-cta">Contattaci</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="pagina-contatti">
+
+        <!-- Intestazione -->
+        <section class="intestazione">
+            <p class="sottotitolo">Siamo qui per te</p>
+            <h1>Contattaci</h1>
+            <p class="intestazione-descrizione">
+                Hai una domanda su un prodotto, vuoi progettare uno spazio
+                o vuoi semplicemente conoscerci meglio? Scrivici: ti risponderemo
+                entro 24 ore.
+            </p>
+        </section>
+
+        <!-- Contenuto principale -->
+        <div class="contenuto">
+
+            <!-- Card informazioni -->
+            <div class="card-informazioni">
+
+                <div class="blocco-info">
+                    <h3>Showroom</h3>
+                    <address>
+                        Via Roma, 3<br>
+                        20121 Milano (MI)
+                    </address>
+                </div>
+
+                <div class="blocco-info">
+                    <h3>Recapiti</h3>
+                    <p>
+                    <address><a href="tel:+3933344455">(+39) 333 4445 556</a></address>
+                    <address><a href="mailto:info@renew.it">info@renew.it</a></address>
+                    </p>
+                </div>
+
+                <div class="blocco-info">
+                    <h3>Orari</h3>
+                    <table class="tabella-orari">
+                        <tbody>
+                            <tr>
+                                <td>Lun – Ven</td>
+                                <td>9:00 – 18:30</td>
+                            </tr>
+                            <tr>
+                                <td>Sabato</td>
+                                <td>10:00 – 17:00</td>
+                            </tr>
+                            <tr>
+                                <td>Domenica</td>
+                                <td>Chiuso</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="blocco-info">
+                    <h3>Seguici</h3>
+                    <ul class="social-links">
+                        <li>
+                            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Card modulo -->
+            <div class="card-modulo">
+
+                <div class="modulo-intro">
+                    <h2>Inviaci un messaggio</h2>
+                    <p>I campi contrassegnati con * sono obbligatori.</p>
+                </div>
+
+                <!-- Messaggio di conferma -->
+                <div class="messaggio-conferma" id="messaggio-conferma" role="alert">
+                    Grazie per averci scritto. Ti risponderemo entro 24 ore.
+                </div>
+
+                <form class="modulo-contatto" id="modulo-contatto" novalidate>
+
+                    <div class="riga-campi">
+                        <div class="gruppo-campo">
+                            <label for="nome">Nome *</label>
+                            <input type="text" id="nome" name="nome" placeholder="Mario" required
+                                autocomplete="given-name" />
+                        </div>
+                        <div class="gruppo-campo">
+                            <label for="cognome">Cognome *</label>
+                            <input type="text" id="cognome" name="cognome" placeholder="Rossi" required
+                                autocomplete="family-name" />
+                        </div>
+                    </div>
+
+                    <div class="riga-campi">
+                        <div class="gruppo-campo">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" placeholder="mario.rossi@email.it" required
+                                autocomplete="email" />
+                        </div>
+                        <div class="gruppo-campo">
+                            <label for="telefono">Telefono</label>
+                            <input type="tel" id="telefono" name="telefono" placeholder="+39 000 000 0000"
+                                autocomplete="tel" />
+                        </div>
+                    </div>
+
+                    <div class="gruppo-campo">
+                        <label for="oggetto">Oggetto *</label>
+                        <select id="oggetto" name="oggetto" required>
+                            <option value="" disabled selected>Seleziona un argomento</option>
+                            <option value="informazioni">Informazioni su prodotti</option>
+                            <option value="preventivo">Richiesta preventivo</option>
+                            <option value="progettazione">Consulenza progettazione</option>
+                            <option value="assistenza">Assistenza post-vendita</option>
+                            <option value="altro">Altro</option>
+                        </select>
+                    </div>
+
+                    <div class="gruppo-campo">
+                        <label for="messaggio">Messaggio *</label>
+                        <textarea id="messaggio" name="messaggio" placeholder="Scrivi qui il tuo messaggio…"
+                            required></textarea>
+                    </div>
+
+                    <div class="casella-privacy">
+                        <input type="checkbox" id="privacy" name="privacy" required />
+                        <label for="privacy">
+                            Ho letto e accetto la <a href="#">Privacy Policy</a>.
+                            I dati forniti saranno trattati esclusivamente per rispondere alla tua richiesta.
+                        </label>
+                    </div>
+
+                    <button type="submit" class="bottone-invio">Invia messaggio</button>
+
+                </form>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <div class="container-footer">
+            <div class="box-1">
+                <h3>Lorem ipsum</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam rem a aspernatur nostrum aperiam
+                    omnis, beatae ea quos error totam, aliquid atque doloremque, expedita vel illum quas quisquam
+                    voluptas! Neque?
+                </p>
+            </div>
+            <div class="box-2">
+                <h3>Contatti</h3>
+                <ul>
+                    <li>
+                        <address>Via Roma 3, Milano</address>
+                    </li>
+                    <li>
+                        <address><a href="tel:+3933344455">(+39) 333 4445 556</a></address>
+                    </li>
+                    <li>
+                        <address><a href="mailto:info@renew.it">info@renew.it</a></address>
+                    </li>
+                    <li class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="box-3">
+                <h3>Link utili</h3>
+                <ul>
+                    <li><a href="#">Chi siamo</a></li>
+                    <li><a href="#">Servizi</a></li>
+                    <li><a href="#">Galleria</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <small>Room-ati &#169; 2026</small>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/3063ad3f8f.js" crossorigin="anonymous"></script>
+
+    <script>
+        const modulo = document.getElementById('modulo-contatto');
+        const conferma = document.getElementById('messaggio-conferma');
+
+        modulo.addEventListener('submit', function (e) {
+            e.preventDefault();
+            if (!modulo.checkValidity()) {
+                modulo.reportValidity();
+                return;
+            }
+            modulo.style.display = 'none';
+            conferma.classList.add('visibile');
+        });
+    </script>
+
+</body>
+
+</html>
