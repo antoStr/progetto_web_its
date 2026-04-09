@@ -1,237 +1,281 @@
 <!doctype html>
 <html lang="it">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cucina | Arredo&Stile</title>
-    <link rel="stylesheet" href="../css/homepage_prodotti.css" />
-    <script
-      src="https://kit.fontawesome.com/3063ad3f8f.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="../js/script_homepage.js" defer></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Jost:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header>
-      <!-- navbar -->
-      <!-- div overlay hamburger hidden -->
-      <div class="nav-overlay" id="navOverlay"></div>
-      <nav class="container-nav">
-        <div class="nav-logo">Room-ati</div>
-        <!-- btn hamburger mobile 768px -->
-        <button class="nav-toggle" id="navToggle">
-          <i class="fa-solid fa-bars"></i>
-        </button>
 
-        <ul class="nav-links" id="navLinks">
-          <!-- close btn hamburger -->
-          <li>
-            <button class="nav-close" id="navClose">
-              <i class="fa-solid fa-xmark"></i>
-            </button>
-          </li>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cucina | Arredo&Stile</title>
+  <link rel="stylesheet" href="../css/homepage_prodotti.css" />
+  <script src="https://kit.fontawesome.com/3063ad3f8f.js" crossorigin="anonymous"></script>
+  <script src="../js/script_homepage.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Jost:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet" />
+</head>
 
-          <li><a href="#">Chi siamo</a></li>
-          <li><a href="#">Renew</a></li>
-          <li><a href="../html/homepage.html">Home</a></li>
-          <li><a href="#" class="nav-cta">Contattaci</a></li>
-        </ul>
-      </nav>
-    </header>
+<body>
+  <header>
+    <!-- navbar -->
+    <!-- div overlay hamburger hidden -->
+    <div class="nav-overlay" id="navOverlay"></div>
+    <nav class="container-nav">
+      <div class="nav-logo"><a href="../html/homepage.html">Room-ati</a></div>
+      <!-- btn hamburger mobile 768px -->
+      <button class="nav-toggle" id="navToggle">
+        <i class="fa-solid fa-bars"></i>
+      </button>
 
-    <main class="catalog-container">
-      <section class="intro-text">
-        <h1>Cucina</h1>
-        <p>Eccellenza culinaria tra design d'avanguardia e materiali nobili e ricercati.</p>
-      </section>
+      <ul class="nav-links" id="navLinks">
+        <!-- close btn hamburger -->
+        <li>
+          <button class="nav-close" id="navClose">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </li>
 
-      <div class="product-grid">
-        <div class="product-card">
-          <div class="product-img-wrapper">
-            <img
-              src="https://images.unsplash.com/photo-1505693314120-0d443867891c?auto=format&fit=crop&q=80&w=500"
-              alt="Letto Minimal"
-            />
-          </div>
-          <div class="product-info">
-            <h3>Letto Sdragagnaus</h3>
-            <p>
-              Struttura in frassino naturale con testiera imbottita in cotone
-              organico.
-            </p>
-            <span class="price">€1.200</span>
-            <button onclick="addToCart()" class="add-to-cart">
-              Aggiungi al carrello
-            </button>
-          </div>
+        <li><a href="../html/storia.html">Chi siamo</a></li>
+        <li><a href="../html/renew.html">Renew</a></li>
+        <li><a href="../html/prodotti.html">Galleria</a></li>
+        <li><a href="../html/contatti.html" class="nav-cta">Contattaci</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="catalog-container">
+    <section class="intro-text">
+      <h1>Cucina</h1>
+      <p>Eccellenza culinaria tra design d'avanguardia e materiali nobili e ricercati.</p>
+    </section>
+
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="product-img-wrapper">
+          <img src="../img/cucina1.webp" alt="Cucina Figa" />
         </div>
-
-        <div class="product-card">
-          <div class="product-img-wrapper">
-            <img
-              src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&q=80&w=500"
-              alt="Letto Zen"
-            />
-          </div>
-          <div class="product-info">
-            <h3>Letto Zen</h3>
-            <p>
-              Linee basse d'ispirazione orientale, perfetto per ambienti
-              moderni.
-            </p>
-            <span class="price">€950</span>
-            <button onclick="addToCart()" class="add-to-cart">
-              Aggiungi al carrello
-            </button>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-img-wrapper">
-            <img
-              src="https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&q=80&w=500"
-              alt="Letto Loft"
-            />
-          </div>
-          <div class="product-info">
-            <h3>Letto Loft</h3>
-            <p>
-              Struttura in metallo brunito con dettagli in pelle invecchiata.
-            </p>
-            <span class="price">€1.450</span>
-            <button onclick="addToCart()" class="add-to-cart">
-              Aggiungi al carrello
-            </button>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-img-wrapper">
-            <img
-              src="https://images.unsplash.com/photo-1731779702204-2b6421b6a6b2?q=80&w=982&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="Letto Minimal"
-            />
-          </div>
-          <div class="product-info">
-            <h3>Letto Minimal</h3>
-            <p>
-              Struttura in frassino naturale con testiera imbottita in cotone
-              organico.
-            </p>
-            <span class="price">€1.200</span>
-            <button onclick="addToCart()" class="add-to-cart">
-              Aggiungi al carrello
-            </button>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-img-wrapper">
-            <img
-              src="https://images.unsplash.com/photo-1766733041960-0de62f403e7b?q=80&w=1180&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="Letto Zen"
-            />
-          </div>
-          <div class="product-info">
-            <h3>Letto Zen</h3>
-            <p>
-              Linee basse d'ispirazione orientale, perfetto per ambienti
-              moderni.
-            </p>
-            <span class="price">€950</span>
-            <button onclick="addToCart()" class="add-to-cart">
-              Aggiungi al carrello
-            </button>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-img-wrapper">
-            <img
-              src="https://images.unsplash.com/photo-1663811397216-8073705919cd?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="Letto Loft"
-            />
-          </div>
-          <div class="product-info">
-            <h3>Letto Loft</h3>
-            <p>
-              Struttura in metallo brunito con dettagli in pelle invecchiata.
-            </p>
-            <span class="price">€1.450</span>
-            <button onclick="addToCart()" class="add-to-cart">
-              Aggiungi al carrello
-            </button>
-          </div>
-        </div>
-      </div>
-    </main>
-
-    <footer>
-      <div class="container-footer">
-        <div class="box-1">
-          <h3>Room-ati</h3>
+        <div class="product-info">
+          <h3>Cucina Sdragagnaus</h3>
           <p>
-            Trasformiamo spazi in esperienze. Da oltre dieci anni al fianco dei
-            nostri clienti per realizzare ambienti unici e funzionali.
+            Struttura in frassino naturale con testiera imbottita in cotone
+            organico.
           </p>
-        </div>
-        <div class="box-2">
-          <h3>Contatti</h3>
-          <ul>
-            <li><address>Via Roma 3, Milano</address></li>
-            <li>
-              <address>
-                <a href="tel:+3933344455">(+39) 333 4445 556</a>
-              </address>
-            </li>
-            <li>
-              <address>
-                <a href="mailto:info@renew.it">info@renew.it</a>
-              </address>
-            </li>
-            <li class="social-links">
-              <a href="#" aria-label="Facebook"
-                ><i class="fa-brands fa-facebook"></i
-              ></a>
-              <a href="#" aria-label="Instagram"
-                ><i class="fa-brands fa-instagram"></i
-              ></a>
-            </li>
-          </ul>
-        </div>
-        <div class="box-3">
-          <h3>Link utili</h3>
-          <ul>
-            <li><a href="#">Chi siamo</a></li>
-            <li><a href="#">Servizi</a></li>
-            <li><a href="#">Galleria</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-          </ul>
+          <span class="price">€1.200</span>
+          <button onclick="addToCart()" class="add-to-cart">
+            Aggiungi al carrello
+          </button>
         </div>
       </div>
-      <div class="footer-bottom">
-        <small>Room-ati &#169; 2026</small>
-      </div>
-    </footer>
 
-    <div class="cart-floating-bubble" onclick="toggleCart()">
-      <div class="icon" onclick="clearCart()">
-        <span class="cart-icon">
-          <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-        </span>
-        <span id="cart-count" class="cart-badge">0</span>
+      <div class="product-card">
+        <div class="product-img-wrapper">
+          <img src="../img/cucina2.webp" alt="Letto Zen" />
+        </div>
+        <div class="product-info">
+          <h3>Cucina Voldemort</h3>
+          <p>
+            Linee basse d'ispirazione orientale, perfetto per ambienti
+            moderni.
+          </p>
+          <span class="price">€950</span>
+          <button onclick="addToCart()" class="add-to-cart">
+            Aggiungi al carrello
+          </button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrapper">
+          <img src="../img/cucina3.webp" alt="Letto Loft" />
+        </div>
+        <div class="product-info">
+          <h3>Cucina Lapo</h3>
+          <p>
+            Struttura in metallo brunito con dettagli in pelle invecchiata.
+          </p>
+          <span class="price">€1.450</span>
+          <button onclick="addToCart()" class="add-to-cart">
+            Aggiungi al carrello
+          </button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrapper">
+          <img src="../img/cucina4.webp" alt="Letto Minimal" />
+        </div>
+        <div class="product-info">
+          <h3>Cucina Marmo</h3>
+          <p>
+            Struttura in frassino naturale con testiera imbottita in cotone
+            organico.
+          </p>
+          <span class="price">€1.200</span>
+          <button onclick="addToCart()" class="add-to-cart">
+            Aggiungi al carrello
+          </button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrapper">
+          <img src="../img/cucina5.webp" alt="Letto Zen" />
+        </div>
+        <div class="product-info">
+          <h3>Cucina Carina</h3>
+          <p>
+            Linee basse d'ispirazione orientale, perfetto per ambienti
+            moderni.
+          </p>
+          <span class="price">€950</span>
+          <button onclick="addToCart()" class="add-to-cart">
+            Aggiungi al carrello
+          </button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrapper">
+          <img src="../img/cucina6.webp" alt="Letto Zen" />
+        </div>
+        <div class="product-info">
+          <h3>Cucina Casa</h3>
+          <p>
+            Linee basse d'ispirazione orientale, perfetto per ambienti
+            moderni.
+          </p>
+          <span class="price">€950</span>
+          <button onclick="addToCart()" class="add-to-cart">
+            Aggiungi al carrello
+          </button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrapper">
+          <img src="../img/cucina7.webp" alt="Letto Zen" />
+        </div>
+        <div class="product-info">
+          <h3>Cucina Film</h3>
+          <p>
+            Linee basse d'ispirazione orientale, perfetto per ambienti
+            moderni.
+          </p>
+          <span class="price">€950</span>
+          <button onclick="addToCart()" class="add-to-cart">
+            Aggiungi al carrello
+          </button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrapper">
+          <img src="../img/cucina8.webp" alt="Letto Zen" />
+        </div>
+        <div class="product-info">
+          <h3>Cucina Elegance</h3>
+          <p>
+            Linee basse d'ispirazione orientale, perfetto per ambienti
+            moderni.
+          </p>
+          <span class="price">€950</span>
+          <button onclick="addToCart()" class="add-to-cart">
+            Aggiungi al carrello
+          </button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrapper">
+          <img src="../img/cucina9.webp" alt="Letto Zen" />
+        </div>
+        <div class="product-info">
+          <h3>Cucina Ricconi</h3>
+          <p>
+            Linee basse d'ispirazione orientale, perfetto per ambienti
+            moderni.
+          </p>
+          <span class="price">€950</span>
+          <button onclick="addToCart()" class="add-to-cart">
+            Aggiungi al carrello
+          </button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrapper">
+          <img src="../img/cucina10.webp" alt="Letto Loft" />
+        </div>
+        <div class="product-info">
+          <h3>Cucina Bamboo</h3>
+          <p>
+            Struttura in metallo brunito con dettagli in pelle invecchiata.
+          </p>
+          <span class="price">€1.450</span>
+          <button onclick="addToCart()" class="add-to-cart">
+            Aggiungi al carrello
+          </button>
+        </div>
       </div>
     </div>
-    <script src="../js/hamburger_nav_sm.js"></script>
-  </body>
+  </main>
+
+  <footer>
+    <div class="container-footer">
+      <div class="box-1">
+        <h3>Room-ati</h3>
+        <p>
+          Trasformiamo spazi in esperienze. Da oltre dieci anni al fianco dei
+          nostri clienti per realizzare ambienti unici e funzionali.
+        </p>
+      </div>
+      <div class="box-2">
+        <h3>Contatti</h3>
+        <ul>
+          <li>
+            <address>Via Roma 3, Milano</address>
+          </li>
+          <li>
+            <address>
+              <a href="tel:+3933344455">(+39) 333 4445 556</a>
+            </address>
+          </li>
+          <li>
+            <address>
+              <a href="mailto:info@renew.it">info@renew.it</a>
+            </address>
+          </li>
+          <li class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="box-3">
+        <h3>Link utili</h3>
+        <ul>
+          <li><a href="../html/storia.html">Chi siamo</a></li>
+          <li><a href="../html/renew.html">Servizi</a></li>
+          <li><a href="../html/prodotti.html">Galleria</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <small>Room-ati &#169; 2026</small>
+    </div>
+  </footer>
+
+  <div class="cart-floating-bubble" onclick="toggleCart()">
+    <div class="icon" onclick="clearCart()">
+      <span class="cart-icon">
+        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+      </span>
+      <span id="cart-count" class="cart-badge">0</span>
+    </div>
+  </div>
+  <script src="../js/hamburger_nav_sm.js"></script>
+</body>
+
 </html>
