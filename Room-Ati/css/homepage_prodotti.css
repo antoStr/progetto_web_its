@@ -366,7 +366,7 @@ body {
   gap: 20px;
 
   /* Permette alla sezione di occupare tutta l'altezza disponibile */
-  height: 100%;
+  height: 90%;
   width: 100%;
 }
 
