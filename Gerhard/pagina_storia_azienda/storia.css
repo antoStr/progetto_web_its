@@ -51,7 +51,9 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: sticky;
+  position: fixed;
+  border-bottom: 2px solid var(--cream);
+  width: 100%;
   top: 0;
   z-index: 100;
 }
@@ -76,7 +78,6 @@ a {
   font-weight: 400;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  text-decoration: none;
   color: rgba(255, 255, 255, 0.75);
   transition: color 0.2s;
 }
@@ -86,15 +87,90 @@ a {
 }
 
 .nav-cta {
-  background-color: var(--gold) !important;
-  color: var(--white) !important;
+  background-color: var(--gold);
+  color: var(--white);
   padding: 8px 22px;
   border-radius: 50px;
 }
 
-.nav-cta:hover {
-  background-color: var(--gold-light) !important;
-  color: var(--charcoal) !important;
+.nav-links li .nav-cta {
+  color: var(--charcoal);
+  transition: all 0.3s ease;
+}
+
+.nav-links li .nav-cta:hover {
+  background-color: var(--gold-light);
+  color: var(--charcoal);
+}
+
+/* hamburger mobile */
+/* nav mobile hidden */
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 90;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+}
+
+.nav-close {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-bottom: 1rem;
+}
+
+/* da js prende la classe se aperto */
+.nav-overlay.open {
+  display: block;
+  opacity: 1;
+}
+
+/* media per hamburger */
+@media (max-width: 768px) {
+  .nav-toggle {
+    color: var(--gold-light);
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 75%;
+    max-width: 300px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3rem;
+    z-index: 100;
+    transition: right 0.3s ease;
+    border-left: 2px solid var(--cream);
+    background-color: var(--charcoal);
+  }
+
+  /* con -100 è nascosto click js torna a 0 */
+  .nav-links.open {
+    right: 0;
+  }
+
+  .nav-close {
+    display: block;
+    color: var(--gold-light);
+  }
 }
 
 /* sezione hero */
@@ -124,7 +200,7 @@ a {
 .hero img {
     object-fit: cover;
     border-radius: 50%;
-    max-width: 100%;
+    height: 200px;
     box-shadow: var(--shadow-mid);
 }
 
@@ -511,10 +587,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-
     .container-footer {
         flex-direction: column;
         gap: 40px;

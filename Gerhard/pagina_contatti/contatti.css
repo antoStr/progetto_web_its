@@ -49,63 +49,139 @@ ul {
 
 /* navbar */
 .container-nav {
-    height: 72px;
-    background-color: var(--charcoal);
-    padding: 0 5%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+  height: 72px;
+  background-color: var(--charcoal);
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  border-bottom: 2px solid var(--cream);
+  width: 100%;
+  top: 0;
+  z-index: 100;
 }
 
 .nav-logo {
-    font-family: var(--font-display);
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: var(--gold-light);
-    letter-spacing: 0.04em;
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--gold-light);
+  letter-spacing: 0.04em;
 }
 
 .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
 }
 
 .nav-links li a {
-    font-family: var(--font-body);
-    font-size: 0.85rem;
-    font-weight: 400;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.75);
-    transition: color 0.2s;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+  transition: color 0.2s;
 }
 
 .nav-links li a:hover {
-    color: var(--gold-light);
+  color: var(--gold-light);
 }
 
 .nav-cta {
-    background-color: var(--gold) !important;
-    color: var(--white) !important;
-    padding: 8px 22px;
-    border-radius: 50px;
+  background-color: var(--gold);
+  color: var(--white);
+  padding: 8px 22px;
+  border-radius: 50px;
 }
 
-.nav-cta:hover {
-    background-color: var(--gold-light) !important;
-    color: var(--charcoal) !important;
+.nav-links li .nav-cta {
+  color: var(--charcoal);
+  transition: all 0.3s ease;
+}
+
+.nav-links li .nav-cta:hover {
+  background-color: var(--gold-light);
+  color: var(--charcoal);
+}
+
+/* hamburger mobile */
+/* nav mobile hidden */
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 90;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+}
+
+.nav-close {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-bottom: 1rem;
+}
+
+/* da js prende la classe se aperto */
+.nav-overlay.open {
+  display: block;
+  opacity: 1;
+}
+
+/* media per hamburger */
+@media (max-width: 768px) {
+  .nav-toggle {
+    color: var(--gold-light);
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 75%;
+    max-width: 300px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3rem;
+    z-index: 100;
+    transition: right 0.3s ease;
+    border-left: 2px solid var(--cream);
+    background-color: var(--charcoal);
+  }
+
+  /* con -100 è nascosto click js torna a 0 */
+  .nav-links.open {
+    right: 0;
+  }
+
+  .nav-close {
+    display: block;
+    color: var(--gold-light);
+  }
 }
 
 /* sezione pagina */
 .pagina-contatti {
     max-width: 860px;
     margin: 0 auto;
-    padding: 72px 24px 100px;
+    padding: 100px 24px 100px;
     display: flex;
     flex-direction: column;
     gap: 32px;
@@ -124,7 +200,6 @@ ul {
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--gold);
-    margin-bottom: 12px;
 }
 
 .intestazione h1 {
@@ -133,6 +208,7 @@ ul {
     font-weight: 700;
     color: var(--charcoal);
     line-height: 1.15;
+    margin-top: 0px;
     margin-bottom: 18px;
 }
 
@@ -163,7 +239,7 @@ ul {
 
 .blocco-info h3 {
     font-family: var(--font-display);
-    font-size: 0.72rem;
+    font-size: 1rem;
     font-weight: 600;
     color: var(--gold);
     letter-spacing: 0.16em;
@@ -536,7 +612,7 @@ footer {
 /* responsive */
 @media (max-width: 860px) {
     .pagina-contatti {
-        padding: 48px 16px 80px;
+        padding: 90px 16px 80px;
     }
 
     .card-informazioni {
@@ -562,13 +638,13 @@ footer {
     .intestazione h1 {
         font-size: 2.2rem;
     }
+
+    .intestazione {
+        padding: 0 16px 16px;
+    }
 }
 
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-
     .container-footer {
         flex-direction: column;
         gap: 40px;

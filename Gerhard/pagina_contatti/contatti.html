@@ -22,9 +22,24 @@
 
     <!-- header -->
     <header>
+        <!-- navbar -->
+        <!-- div overlay hamburger hidden -->
+        <div class="nav-overlay" id="navOverlay"></div>
         <nav class="container-nav">
             <div class="nav-logo">Room-ati</div>
-            <ul class="nav-links">
+            <!-- btn hamburger mobile 768px -->
+            <button class="nav-toggle" id="navToggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <!-- close btn hamburger -->
+                <li>
+                    <button class="nav-close" id="navClose">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </li>
+
                 <li><a href="#">Chi siamo</a></li>
                 <li><a href="#">Renew</a></li>
                 <li><a href="#">Galleria</a></li>
@@ -224,21 +239,8 @@
 
     <script src="https://kit.fontawesome.com/3063ad3f8f.js" crossorigin="anonymous"></script>
 
-    <script>
-        const modulo = document.getElementById('modulo-contatto');
-        const conferma = document.getElementById('messaggio-conferma');
-
-        modulo.addEventListener('submit', function (e) {
-            e.preventDefault();
-            if (!modulo.checkValidity()) {
-                modulo.reportValidity();
-                return;
-            }
-            modulo.style.display = 'none';
-            conferma.classList.add('visibile');
-        });
-    </script>
-
+    <script src="./conferma.js" defer></script>
+    <script src="./navbar.js" defer></script>
 </body>
 
 </html>
