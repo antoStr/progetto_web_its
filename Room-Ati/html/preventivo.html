@@ -46,7 +46,7 @@
 
           <li><a href="../html/storia.html">Chi siamo</a></li>
           <li><a href="./renew.html">Renew</a></li>
-          <li><a href="../html/prodotti.html">Galleria prodotti</a></li>
+          <li><a href="../html/prodotti.html">Galleria</a></li>
           <li>
             <a href="../html/contatti.html" class="nav-cta">Contattaci</a>
           </li>
@@ -65,13 +65,13 @@
               <div class="nome-cognome-container">
                 <label for="nome">Nome</label>
                 <input type="text" name="nome" id="nome" />
-                <label for="nome">Cognome</label>
+                <label for="cognome">Cognome</label>
                 <input type="text" name="cognome" id="cognome" />
               </div>
               <div class="email-telefono-container">
-                <label for="tel">Telefono</label>
+                <label for="telefono">Telefono</label>
                 <input type="number" name="telefono" id="telefono" />
-                <label for="nome">Email</label>
+                <label for="email">Email</label>
                 <input type="email" name="email" id="email" />
               </div>
             </fieldset>
@@ -108,30 +108,33 @@
             <fieldset>
               <legend>Scelta servizio</legend>
               <div class="servizi-container">
-                <label for="scelta-servizio">Scegliere un</label>
+                <label for="scelta-servizio">Scegliere un servizio</label>
                 <select name="scelta-servizio" id="scelta-servizio">
                   <option></option>
                   <option value="servizio-1">Consulenza privata</option>
                   <option value="servizio-2">Primo preventivo</option>
                   <option value="servizio-3">Finanziamento</option>
                 </select>
-                <label for="ristrutturazione"
-                  >L'appartamento ha ricevuto ristrutturazioni?</label
+                <span class="radio-question"
+                  >L'appartamento ha ricevuto ristrutturazioni?</span
                 >
                 <div class="radio-group">
-                  <span>Si</span>
-                  <input
-                    type="radio"
-                    name="scelta-ristrutturazione"
-                    id="scelta-ristrutturazione-yes"
-                  />
-                  <span>No</span>
-
-                  <input
-                    type="radio"
-                    name="scelta-ristrutturazione"
-                    id="scelta-ristrutturazione-no"
-                  />
+                  <label for="scelta-ristrutturazione-yes">
+                    <input
+                      type="radio"
+                      name="scelta-ristrutturazione"
+                      id="scelta-ristrutturazione-yes"
+                    />
+                    Sì
+                  </label>
+                  <label for="scelta-ristrutturazione-no">
+                    <input
+                      type="radio"
+                      name="scelta-ristrutturazione"
+                      id="scelta-ristrutturazione-no"
+                    />
+                    No
+                  </label>
                 </div>
               </div>
             </fieldset>

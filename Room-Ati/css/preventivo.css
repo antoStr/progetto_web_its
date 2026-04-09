@@ -284,7 +284,7 @@ fieldset legend {
 .modulo-container label {
   display: block;
   font-family: var(--font-body);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.14em;
@@ -329,9 +329,13 @@ fieldset legend {
 /* RADIO */
 
 .modulo-container .radio-group {
+  padding-top: 5px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  gap: 10px;
+}
+
+.modulo-container .radio-group span {
+  color: var(--charcoal);
 }
 
 .modulo-container .radio-group label {
@@ -349,23 +353,17 @@ fieldset legend {
 .modulo-container input[type="radio"] {
   width: 18px;
   height: 18px;
-  accent-color: var(--gold);
+  color: var(--charcoal);
+
   cursor: pointer;
   border-bottom: none;
 }
 
-/* DOMANDA RADIO */
-
-.radio-question {
-  font-family: var(--font-body);
-  font-size: 0.72rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  color: var(--text-muted);
-  margin-top: 20px;
-  margin-bottom: 10px;
-  display: block;
+span.radio-question {
+  display: inline-block;
+  font-size: 0.9rem;
+  margin-top: 30px;
+  color: var(--charcoal);
 }
 
 /* SUBMIT */
@@ -407,10 +405,6 @@ fieldset legend {
 
   fieldset {
     padding: 24px 20px;
-  }
-
-  .two-col {
-    grid-template-columns: 1fr;
   }
 }
 
