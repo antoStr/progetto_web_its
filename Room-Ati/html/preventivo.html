@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta
+      name="description"
+      content="Pagina richiesta del preventivo per progetto renew"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Jost:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/preventivo.css" />
+
+    <title>Preventivo Camera</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+      <!-- navbar -->
+      <!-- div overlay hamburger hidden -->
+      <div class="nav-overlay" id="navOverlay"></div>
+      <nav class="container-nav">
+        <div class="nav-logo"><a href="../html/homepage.html">Room-ati</a></div>
+        <!-- btn hamburger mobile 768px -->
+        <button class="nav-toggle" id="navToggle">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+          <!-- close btn hamburger -->
+          <li>
+            <button class="nav-close" id="navClose">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </li>
+
+          <li><a href="../html/storia.html">Chi siamo</a></li>
+          <li><a href="./renew.html">Renew</a></li>
+          <li><a href="../html/prodotti.html">Galleria prodotti</a></li>
+          <li>
+            <a href="../html/contatti.html" class="nav-cta">Contattaci</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="wrapper-modulo">
+        <h1>Modulo Preventivo</h1>
+        <span>La tua idea prende vita a partire da qui</span>
+
+        <form>
+          <div class="modulo-container">
+            <fieldset>
+              <legend>Intestazione</legend>
+              <div class="nome-cognome-container">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" />
+                <label for="nome">Cognome</label>
+                <input type="text" name="cognome" id="cognome" />
+              </div>
+              <div class="email-telefono-container">
+                <label for="tel">Telefono</label>
+                <input type="number" name="telefono" id="telefono" />
+                <label for="nome">Email</label>
+                <input type="email" name="email" id="email" />
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Informazioni appartamento</legend>
+              <div class="informazioni-appartamento-container">
+                <label for="indirizzo">Indirizzo</label>
+                <input type="text" name="indirizzo" id="indirizzo" />
+                <label for="civico">Civico</label>
+                <input type="text" name="civico" id="civico" />
+                <label for="citta">Citt&agrave;</label>
+                <input type="text" name="citta" id="citta" />
+                <label for="provincia">Provincia</label>
+                <input type="text" name="provincia" id="provincia" />
+                <label for="type-appartamento">Tipo di abitazione</label>
+                <select name="type-appartamento" id="type-appartamento">
+                  <option></option>
+                  <option value="appartamento">Appartamento</option>
+                  <option value="appartamento">Villa singola</option>
+                  <option value="appartamento">Villa bifamigliare</option>
+                  <option value="appartamento">Villetta a schiera</option>
+                  <option value="appartamento">Condominio</option>
+                  <option value="appartamento">Attico</option>
+                  <option value="appartamento">Loft</option>
+                  <option value="appartamento">Mansarda</option>
+                  <option value="appartamento">Monolocale</option>
+                  <option value="appartamento">Rustico / Casale</option>
+                  <option value="appartamento">Palazzo storico</option>
+                </select>
+                <label for="num-stanze">Numero di stanze</label>
+                <input type="number" name="num-stanze" id="num-stanze" />
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Scelta servizio</legend>
+              <div class="servizi-container">
+                <label for="scelta-servizio">Scegliere un</label>
+                <select name="scelta-servizio" id="scelta-servizio">
+                  <option></option>
+                  <option value="servizio-1">Consulenza privata</option>
+                  <option value="servizio-2">Primo preventivo</option>
+                  <option value="servizio-3">Finanziamento</option>
+                </select>
+                <label for="ristrutturazione"
+                  >L'appartamento ha ricevuto ristrutturazioni?</label
+                >
+                <div class="radio-group">
+                  <span>Si</span>
+                  <input
+                    type="radio"
+                    name="scelta-ristrutturazione"
+                    id="scelta-ristrutturazione-yes"
+                  />
+                  <span>No</span>
+
+                  <input
+                    type="radio"
+                    name="scelta-ristrutturazione"
+                    id="scelta-ristrutturazione-no"
+                  />
+                </div>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Informazioni supplementari</legend>
+              <label for="messaggio-opzionale"
+                >Hai una richiesta specifica?</label
+              >
+              <textarea
+                name="messaggio-opzionale"
+                id="messaggio-opzionale"
+                placeholder="Scrivi il tuo messaggio qui!"
+              ></textarea>
+            </fieldset>
+            <button type="submit">Invia modulo</button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <!-- footer -->
+    <footer>
+      <div class="container-footer">
+        <div class="box-1">
+          <h3>Room-ati</h3>
+          <p>
+            Trasformiamo spazi in esperienze. Da oltre dieci anni al fianco dei
+            nostri clienti per realizzare ambienti unici e funzionali.
+          </p>
+        </div>
+        <div class="box-2">
+          <h3>Contatti</h3>
+          <ul>
+            <li><address>Via Roma 3, Milano</address></li>
+            <li>
+              <address>
+                <a href="tel:+3933344455">(+39) 333 4445 556</a>
+              </address>
+            </li>
+            <li>
+              <address>
+                <a href="mailto:info@renew.it">info@renew.it</a>
+              </address>
+            </li>
+            <li class="social-links">
+              <a href="#" aria-label="Facebook"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <div class="box-3">
+          <h3>Link utili</h3>
+          <ul>
+            <li><a href="../html/homepage.html">Homepage</a></li>
+            <li><a href="#">Chi siamo</a></li>
+            <li><a href="../html/renew.html">Progetto Renew</a></li>
+            <li><a href="../html/prodotti.html">Galleria Prodotti</a></li>
+            <li><a href="../html/prodotti.html">Contatti</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <small>Room-ati &#169; 2026</small>
+      </div>
+    </footer>
+    <script
+      src="https://kit.fontawesome.com/3063ad3f8f.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/hamburger_nav_sm.js"></script>
+  </body>
+</html>
