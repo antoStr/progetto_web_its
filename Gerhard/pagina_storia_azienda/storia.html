@@ -5,6 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Storia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Jost:wght@300;400;500&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="storia.css">
@@ -13,17 +21,24 @@
 <body>
     <!-- header -->
     <header>
-        <nav>
-            <div class="container-nav"></div>
+        <nav class="container-nav">
+            <div class="nav-logo">Room-ati</div>
+            <ul class="nav-links">
+                <li><a href="#">Chi siamo</a></li>
+                <li><a href="#">Renew</a></li>
+                <li><a href="#">Galleria</a></li>
+                <li><a href="#" class="nav-cta">Contattaci</a></li>
+            </ul>
         </nav>
     </header>
 
     <!-- main -->
     <main>
 
-        <!-- Sezione chi siamo -->
-        <section class="chi-siamo">
-            <div class="chi-siamo-text">
+        <!-- Sezione hero -->
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Lorem Ipsum</h1>
                 <p>
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae
                     aliquid nobis incidunt itaque dolor reprehenderit aperiam ad
@@ -31,7 +46,7 @@
                     ducimus inventore omnis quas, delectus dolorem!
                 </p>
             </div>
-            <div class="chi-siamo-img">
+            <div class="hero-img">
                 <img src="https://picsum.photos/400/400" class="img-circle" alt="foto del team" />
             </div>
         </section>
@@ -132,7 +147,7 @@
 
                 <!-- Fine timeline -->
                 <div class="timeline-fine">
-                    <p>Lorem Ipsum</p>
+                    <a href="#" class="timeline-fine-btn">Lorem ipsum</a>
                 </div>
 
             </section>
@@ -141,7 +156,53 @@
     </main>
 
     <!-- footer -->
-    <footer></footer>
+    <footer>
+        <div class="container-footer">
+            <div class="box-1">
+                <h3>Renew</h3>
+                <p>
+                    Trasformiamo spazi in esperienze. Da oltre dieci anni al fianco dei
+                    nostri clienti per realizzare ambienti unici e funzionali.
+                </p>
+            </div>
+            <div class="box-2">
+                <h3>Contatti</h3>
+                <ul>
+                    <li>
+                        <address>Via Roma 3, Milano</address>
+                    </li>
+                    <li>
+                        <address>
+                            <a href="tel:+3933344455">(+39) 333 4445 556</a>
+                        </address>
+                    </li>
+                    <li>
+                        <address>
+                            <a href="mailto:info@renew.it">info@renew.it</a>
+                        </address>
+                    </li>
+                    <li class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="box-3">
+                <h3>Link utili</h3>
+                <ul>
+                    <li><a href="#">Chi siamo</a></li>
+                    <li><a href="#">Servizi</a></li>
+                    <li><a href="#">Galleria</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <small>Room-ati &#169; 2026</small>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/3063ad3f8f.js" crossorigin="anonymous"></script>
 
 </body>
 
