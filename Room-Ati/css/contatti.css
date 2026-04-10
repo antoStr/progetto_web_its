@@ -504,107 +504,108 @@ ul {
 
 /* footer */
 footer {
-    background-color: var(--charcoal);
-    color: rgba(255, 255, 255, 0.75);
+  background-color: var(--charcoal);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .container-footer {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 80px 5% 60px;
-    display: flex;
-    gap: 60px;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 5% 60px;
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .box-1,
 .box-2,
 .box-3 {
-    flex: 1;
-    min-width: 200px;
-    max-width: 340px;
+  flex: 1;
+  min-width: 200px;
+  max-width: 340px;
 }
 
 .box-1 h3,
 .box-2 h3,
 .box-3 h3 {
-    font-family: var(--font-display);
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: var(--gold-light);
-    margin-bottom: 1.2rem;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--gold-light);
+  margin-bottom: 1.2rem;
 }
 
 .box-1 p {
-    font-size: 0.9rem;
-    line-height: 1.8;
-    color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .box-2 ul,
 .box-3 ul {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .box-2 ul li,
 .box-3 ul li {
-    font-size: 0.9rem;
+  font-size: 0.9rem;
 }
 
 .box-2 address {
-    font-style: normal;
-    color: rgba(255, 255, 255, 0.65);
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.65);
 }
 
 .box-2 address a,
 .box-3 ul li a {
-    color: rgba(255, 255, 255, 0.65);
-    text-decoration: none;
-    transition: color 0.2s;
+  color: rgba(255, 255, 255, 0.65);
+  transition: color 0.2s;
 }
 
 .box-2 address a:hover,
 .box-3 ul li a:hover {
-    color: var(--gold-light);
+  color: var(--gold-light);
 }
 
 .social-links {
-    display: flex;
-    gap: 16px;
-    margin-top: 8px;
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
 }
 
 .social-links a {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.08);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: rgba(255, 255, 255, 0.65);
-    font-size: 0.95rem;
-    transition: background 0.2s, color 0.2s;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.95rem;
+  transition:
+    background 0.2s,
+    color 0.2s;
 }
 
 .social-links a:hover {
-    background-color: var(--gold);
-    color: var(--white);
+  background-color: var(--gold);
+  color: var(--white);
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-    text-align: center;
-    padding: 20px 5%;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
+  padding: 20px 5%;
 }
 
 .footer-bottom small {
-    font-size: 0.78rem;
-    color: rgba(255, 255, 255, 0.65);
-    letter-spacing: 0.05em;
+  font-size: 1rem;
+  color: rgb(255, 255, 255);
+  letter-spacing: 0.05em;
 }
 
 /* responsive */
@@ -653,4 +654,16 @@ footer {
     .box-3 {
         max-width: 100%;
     }
+}
+
+.errore-campo {
+    font-size: 0.78rem;
+    color: #9e2a2a;
+    margin-top: 4px;
+    display: block;
+    min-height: 1em;
+}
+
+.campo-invalido {
+    border-bottom-color: #9e2a2a;
 }
